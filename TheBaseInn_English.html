@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html>
+<head> 
+	<meta charset="utf-8"> 	
+  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>The Base inn</title> 
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>  <!-- иконочный шрифт -->
+	
+	<link rel="stylesheet" href="css/main.css">  <!-- наш css -->
+	<script src="js/mainJS.js"></script> <!-- наш js -->
+	
+	<!-- Подключили fancybox CSS -->
+	<link rel="stylesheet" href="fancybox/jquery.fancybox.min.css" />
+	
+	<script type="text/javascript" src="fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.easing-1.3.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+ <!-- 	<link rel="stylesheet" href="style.css"/> -->
+
+	
+</head> 
+<body>
+
+	
+<!-- Делаем Шапку Сайта -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark  sticky-top" >
+	<!-- style="background-color: #261C1C;" -->
+		<div class="container-fluid"> <!-- на всю ширину -->
+			<a href="#" class="navbar-brand"><img src="img/The Base inn_1.png"></a>
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+						<span class="navbar-toggler-icon"></span>  <!-- линии на кнопке -->												
+			</button>		
+			<!-- меню, которое открывается при нажатии на кнопку -->
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+				
+					<li class="nav-item">
+						<div class="dropdown">
+						<button class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown">Language
+							<span class="caret"></span> <!-- стрелочка вниз у списка -->
+						</button>
+						<ul class="dropdown-menu">  <!-- Делаем содержимое кнопки в виде списка -->
+							<li><a href="TheBaseInn.html" style="color:#243041">Russian (RUS)<img src="img/ru.png"></a></li>
+							<hr>
+							<li class="disabled"><a href="TheBaseInn_English.html" style="color:#243041">English (US) <img src="img/us.png"></a></li>						
+						</ul>	
+					</div>
+					</li>
+					
+					<li class="nav-item active">
+						<a href="#block-1" class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#block-2" class="nav-link">Hotel</a>
+					</li>
+					<li class="nav-item">
+						<a href="#block-3" class="nav-link">Rooms</a>
+					</li>
+					<li class="nav-item">
+						<a href="#block-4" class="nav-link">Reservations</a>
+					</li>
+					<li class="nav-item">
+						<a href="#block-5" class="nav-link">Contact Us</a>
+					</li>
+					
+				</ul>			
+			</div>
+			
+		</div>
+	</nav>
+		
+<!-- Делаем слайдер изображений	 -->	
+  <div class="carousel slide" data-ride="carousel" id="slides">
+	
+	<!-- Полосочки для выбора картинок -->
+		<ul class="carousel-indicators">
+			<li data-target="#slides" data-slide-to="0" class="active" ></li> <!-- data-slide-to="0"-на какое изображение переходим -->
+			<li data-target="#slides" data-slide-to="1" ></li>
+			<li data-target="#slides" data-slide-to="2" ></li>
+		</ul>
+	
+		<div class="carousel-inner" id="block-1" > <!-- типа список изображений -->
+			<div class="carousel-item active">
+				<img src="img/Thailand7_1260-430px.jpg" >
+				<div class="carousel-caption">
+					<h1 class="display-2">Welcome to Thailand</h1>
+					<br>
+					<!-- <h3>Прикоснитесь к лету</h3> -->
+					<!-- <button type="button" class="btn btn-outline-light btn-lg">Посмотреть</button>
+					<button type="button" class="btn btn-warning btn-lg">Узнать цены</button>	 -->
+				</div>		
+			</div>	
+			
+			<div class="carousel-item ">
+				<img src="img/Thailand5_1260-430px.jpg" >
+				<div class="carousel-caption">
+					<h1 class="display-2">Welcome to Thailand</h1>
+					<br>				
+				</div>
+			</div>
+			<div class="carousel-item ">
+				<img src="img/Thailand8_1260-430px.jpg" >
+				<div class="carousel-caption">
+					<h1 class="display-2">Welcome to Thailand</h1>
+					<br>				
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Основной блок сайта -->
+	<div class="container-fluid" id="block-2">
+		<div class="row text-center alert"><!--  alert-добавляет всякие отступы там -->
+			<div class="col-12">
+				<h1 class="display-4">The Base inn</h1>
+			</div>
+			<hr>
+		</div>
+	</div>
+	
+	<div class="container-fluid"> <!-- ОПИСАНИЕ ОТЕЛЯ ,fluid-растягивается на всю ширину серым сделаем-->
+		<div class="row jumbotron" >  <!-- jumbotron - блок будет серого цвета -->
+			<div class="col-sx-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> <!-- сколько будет занимать колонка в зависимости от размера экрана -->
+				<p class="lead "> <!-- lead - типа текст -->
+					<i class="fas fa-minus"></i>  Providing garden views, The Base inn in Pattaya provides accommodations, an outdoor swimming pool,
+					a garden, a fitness center, a shared lounge and a tennis court.<br>
+          <i class="fas fa-minus"></i>  The air-conditioned units are furnished with hardwood floors and feature a private
+					bathroom, a flat-screen TV, free WiFi, closet, a living room, an equipped kitchen, balcony and views over 
+					the pool. There's a seating and/or dining area in some units.<br>
+          <i class="fas fa-minus"></i>  A playground and a terrace are available for guests at the apartment to use.<br>
+          <i class="fas fa-minus"></i>  Popular points of interest near The Base inn include The Avenue Pattaya, Hard Rock Cafe Pattaya
+					and Central Festival Pattaya Beach. The nearest airport is U-Tapao Rayong-Pattaya International,
+					46.7 km from the accommodation, and the property offers a paid airport shuttle service. <br>
+					<i class="fas fa-minus"></i>  This property also has one of the top-rated locations in Pattaya! Guests are happier about it compared
+					to other properties in the area.<br>
+          <i class="fas fa-minus"></i>  Couples in particular like the location – they rated it 8.8 for a two-person trip.<br>
+					<i class="fas fa-minus"></i>  This property is also rated for the best value in Pattaya! Guests are getting more
+					for their money when compared to other properties in this city.<br>
+				</p>				
+			</div>
+			
+			<!-- <div class="col-sx-12 col-sm-12 col-md-3 col-lg-3 col-xl-2"> --> <!-- сколько будет занимать колонка в зависимости от размера экрана -->
+				<!-- <a href="#">
+					<button class="btn btn-success btn-lg" type="button">
+						Читать далее
+					</button>
+				</a> -->				
+			<!-- </div> -->
+		</div>
+	</div>
+	<br>
+	
+	<!-- Закрытая секция, отображается после нажатия на кнопку -->
+	<div class="text-center">
+		<button type="button" id="gifsButton" class="btn btn-success btn-lg" data-toggle="collapse" data-target="#gifs">
+			Photo Gallery
+		</button>
+	</div>
+	<br>
+	<div id="gifs" class="collapse">
+		<div class="container-fluid padding">
+			<div class="row text-center">
+				
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_5.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_5.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_6.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_6.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_7.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_7.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_8.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_8.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_9.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_9.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_10.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_10.gif" class="gif" >
+					</a> 
+				</div>							
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_11.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_11.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_12.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_12.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_13.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_13.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_14.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_14.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_15.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_15.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_16.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_16.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_17.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_17.gif" class="gif" >
+					</a> 
+				</div>	
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_18.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_18.gif" class="gif" >
+					</a> 
+				</div>
+				<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_19.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_19.gif" class="gif" >
+					</a> 
+				</div>
+					<div class="col-sm-3 col-md-2">
+					<a data-fancybox="gallery-1" href="img/PhotoOtela/PgotoOtela_s_20.gif" >  
+						 <img src="img/PhotoOtela/PgotoOtela_s_20.gif" class="gif" >
+					</a> 
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<br>
+
+	<figure>
+		<div class="fixed-wrap1">
+			<div id="fixed1">								
+			</div>	
+			
+		</div>
+	</figure>
+	
+	 <!-- Блок с характеристиками -->
+	<div class="container-fluid" id="block-3">
+		<div class="row text-center alert"><!--  alert-добавляет всякие отступы там -->
+			<div class="col-12" >
+				<h1 class="display-4">The Base inn</h1>
+			</div>
+			<hr>
+			<div class="col-12">
+				<p class="lead">
+				  ROOMS
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 	<figure>
+		<div class="fixed-wrap3">
+			<div id="fixed3">								
+			</div>	
+		</div>
+	</figure> -->
+	
+	<hr><br>
+	<!-- Простая секция с изображением Стандартные апартаменты-->
+	
+	<div class="container-fluid padding" id="block-7">
+		<h2 class="text-center">Standard Apartment</h2>
+		<br>
+			<div class="row padding" >
+				<div class="offset-lg-2 col-lg-4" > <!-- offset-lg-2-отступ слева -->			
+			 <br>
+				<div class="row"> <!-- row - для теста уже -->	
+					<div class="col">			 										
+							<strong>Apartment Facilities:</strong><br>
+							<i class="fas fa-minus"></i> Balcony<br>
+							<i class="fas fa-minus"></i> Pay-per-view channels<br>
+							<i class="fas fa-minus"></i> Satellite channels<br>
+							<i class="fas fa-minus"></i> Cable channels<br>
+							<i class="fas fa-minus"></i> Flat-screen TV<br>
+							<i class="fas fa-minus"></i> Air conditioning<br>
+							<i class="fas fa-minus"></i> Ironing facilities <br>
+							<i class="fas fa-minus"></i> Sitting area<br>
+							<i class="fas fa-minus"></i> Washing machine<br>
+							<i class="fas fa-minus"></i> Soundproof<br>
+							<i class="fas fa-minus"></i> Hardwood or parquet floors<br>
+							<i class="fas fa-minus"></i> Wardrobe or closet<br>
+							<i class="fas fa-minus"></i> Drying rack for clothing<br>
+							<i class="fas fa-minus"></i> Sofa bed<br>
+							<i class="fas fa-minus"></i> Kitchenette<br>
+							<i class="fas fa-minus"></i> Refrigerator<br>
+							<i class="fas fa-minus"></i> Microwave<br>
+					</div>
+					<div class="col">		
+							<i class="fas fa-minus"></i> Kitchen<br>
+							<i class="fas fa-minus"></i> Dining area<br>
+							<i class="fas fa-minus"></i> Electric kettle<br>
+							<i class="fas fa-minus"></i> Kitchenware<br>
+							<i class="fas fa-minus"></i> Stovetop<br>
+							<i class="fas fa-minus"></i> Dining table<br>
+							<i class="fas fa-minus"></i> Executive Lounge Access<br>
+							<i class="fas fa-minus"></i> Bedding<br>
+							<i class="fas fa-minus"></i> Upper floors accessible by elevator<br>
+							<i class="fas fa-minus"></i> Detached<br>
+							<i class="fas fa-minus"></i> Private apartment in building.<br>
+							<i class="fas fa-minus"></i> Free WiFi!<br>
+							<i class="fas fa-minus"></i> Smoking: No smoking<br>
+							<i class="fas fa-minus"></i> Free private parking is available on site 
+							(reservation is not needed).<br>
+					</div>	
+				 <br>
+					 <div class="col-lg-4">
+					 <p>
+							<strong>View:</strong><br>
+							<i class="fas fa-minus"></i> Ocean view<br>
+							<i class="fas fa-minus"></i> Garden view<br>
+							<i class="fas fa-minus"></i> Pool view<br>
+							<i class="fas fa-minus"></i> Mountain view<br>
+							<i class="fas fa-minus"></i> Landmark view<br>
+							<i class="fas fa-minus"></i> City view<br>		
+						</p>
+					</div>
+				<!-- <a href="#" class="btn btn-danger">Читать далее</a> -->
+			</div>
+			<br>
+		</div>
+		<div class="col-lg-6 apart1" >
+		<br>
+		<div id="gifs">
+			<div class="container-fluid padding">
+				<div class="row text-center">
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_1_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_1_s.jpg" class="gif" >
+							</a> 
+						</div>
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_2_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_2_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_3_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_3_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_4_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_4_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_5_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_5_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_6_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_6_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_7_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_7_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_8_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_8_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_9_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_9_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_10_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_10_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_11_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_12_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_13_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_13_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_14_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_14_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_15_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_15_s.jpg" class="gif" >
+							</a> 
+						</div>	
+					<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_16_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_16_s.jpg" class="gif" >
+							</a> 
+						</div>	
+					<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_17_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_17_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_18_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_18_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_20_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_20_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_21_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_21_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_22_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_22_s.jpg" class="gif" >
+							</a> 
+						</div>		
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_23_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_23_s.jpg" class="gif" >
+							</a> 
+						</div>	
+						<div class="col-sm-6 col-md-3">
+							<a data-fancybox="gallery-2" href="img/StandartApart/StandartApart_24_s.jpg" >  
+								 <img src="img/StandartApart/StandartApart_24_s.jpg" class="gif" >
+							</a> 
+						</div>							
+					</div>
+				</div>
+			</div>
+			<!-- <img src="img/129297601.jpg" class="img-fluid"></img>	 -->
+			</div> 	
+		</div>
+	</div>
+	
+	<!-- Блок с фиксированным изображением, всё в css прописано для него (Лодки)-->
+	<figure>
+		<div class="fixed-wrap">
+			<div id="fixed">
+								
+			</div>	
+		</div>
+	</figure>
+
+	<!-- Карточки превьюшки -->
+	<div class="container-fluid" id="block-4">
+		<div class="row text-center alert " >
+			<div class="col-12" >
+				<h1 class="display-4">Reservations</h1>
+			</div>
+			<hr>
+		</div>
+	</div>
+	
+	<div class="container padding" >
+		<p class="text-center">At the moment, booking is possible through Facebook, the link is indicated in the contacts.
+		<!-- <div class="row padding">	
+				<div class="col-md-4">
+					<div class="card">
+						<img src="img/StandartApart/StandartApart_1_s.jpg" class="card-img-top"></img>
+						<div class="card-body">
+							<h4 class="card-title">Standard Apartment</h4>
+							<p class="card-text">31 m².
+							</p>
+							<a href="#" class="btn btn-warning">Reservations</a>
+						</div>
+					</div>
+				</div>			
+			</div> -->
+		</p>
+		</div>
+		<br><br>
+		
+		<figure>
+		<div class="fixed-wrap2">
+			<div id="fixed2">								
+			</div>	
+		</div>
+	</figure>
+	
+	<!-- Футер сайта -->
+	<footer class="container-fluid" id="block-5">
+		<div class="container-fluid">
+			<div class="row padding text-center">
+				<div class="col-12">
+					<h2>Contact Us</h2>
+				</div>
+			 	<div class="col-12 social padding">
+					<!-- <a href="#"><i class="fab fa-twitter"></i></a>
+					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i class="fab fa-youtube"></i></a> -->
+					<a href="https://www.facebook.com/The-Base-Inn-349834455651774/" target="_blank"><i class="fab fa-facebook"></i></a>					
+				</div> 
+			</div>			
+		</div>
+		<p> <u> Our location : </u> <br>The Base Central Pattaya, 88/1113 Pattayasaisong rd, Pattaya, Bang Lamung, 
+		Chon Buri, 20150 Pattaya, Thailand.  </p>
+		<p>&copy; 2019 The Base Inn.   All rights reserved.   <br>
+		Site development: Pandorrum</p>	
+		<br>
+	</footer>
+	
+	
+	<script src="fancybox/jquery.fancybox.min.js"></script>
+	
+</body>
+</html>
